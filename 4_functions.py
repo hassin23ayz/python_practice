@@ -1,4 +1,8 @@
 '''
+> A method in python is somewhat similar to a function, except it is associated with object/classes
+> Funtions are objects 
+'''
+'''
 #Functions
 def checkIfPrime(num2chck):
     if(num2chck%2 == 0):
