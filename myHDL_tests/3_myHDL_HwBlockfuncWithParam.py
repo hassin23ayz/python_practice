@@ -18,8 +18,8 @@ def clkDriver(clk, period=20):
 	# @instance decorator is used to return a generator function 
 	@instance
 	def drive_clk():
-		while True:
-			yield delay(lowTime)   #yield is similar to VHDL: wait for 
+		while True:                # to make sure generator runs forever it is wrapped in while True loop
+			yield delay(lowTime)   # yield is similar to VHDL: wait for 
 			clk.next = 1
 			yield delay(highTime)
 			clk.next = 0
