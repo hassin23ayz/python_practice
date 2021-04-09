@@ -1,3 +1,7 @@
+'''
+this example shows a hardware block (function) without parameter 
+'''
+
 from myhdl import block, Signal, delay, always, now
 
 # def LedDriver(): A hardware module is modeled by a function 
@@ -19,7 +23,7 @@ def LedDriver():
 
     @always(clk.posedge)
     def at_pos_clk():
-    	print("T:%s __|````|__" % now())
+    	print("T:%s __|````|__" % now(), end = "")
 
     @always(clk.negedge)
     def at_neg_clk():
